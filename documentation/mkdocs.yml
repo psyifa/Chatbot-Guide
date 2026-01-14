@@ -1,0 +1,181 @@
+site_name: DENAI - Documentation
+site_description: Comprehensive documentation for DENAI Enterprise SOP Chatbot System
+site_author: Your Company
+site_url: https://your-domain.vercel.app
+
+# Repository
+repo_name: your-repo/denai-docs
+repo_url: https://github.com/your-repo/denai-docs
+edit_uri: edit/main/docs/
+
+# Copyright
+copyright: Copyright &copy; 2025 Your Company
+
+# Theme Configuration
+theme:
+  name: material
+  language: en
+  palette:
+    # Light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: blue
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    # Dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: blue
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  
+  font:
+    text: Roboto
+    code: Roboto Mono
+  
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - navigation.footer
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.code.copy
+    - content.code.annotate
+    - content.tabs.link
+    - toc.follow
+  
+  icon:
+    repo: fontawesome/brands/github
+    admonition:
+      note: octicons/tag-16
+      abstract: octicons/checklist-16
+      info: octicons/info-16
+      tip: octicons/squirrel-16
+      success: octicons/check-16
+      question: octicons/question-16
+      warning: octicons/alert-16
+      failure: octicons/x-circle-16
+      danger: octicons/zap-16
+      bug: octicons/bug-16
+      example: octicons/beaker-16
+      quote: octicons/quote-16
+
+# Extensions
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+      toc_depth: 3
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+# Plugins
+plugins:
+  - search:
+      lang: en
+      separator: '[\s\-,:!=\[\]()"/]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;'
+  - minify:
+      minify_html: true
+  - git-revision-date-localized:
+      enable_creation_date: true
+      type: timeago
+
+# Extra CSS and JS
+extra_css:
+  - stylesheets/extra.css
+
+extra_javascript:
+  - javascripts/extra.js
+  - https://unpkg.com/mermaid@10/dist/mermaid.min.js
+
+# Extra
+extra:
+  analytics:
+    provider: google
+    property: G-XXXXXXXXXX  # Replace with your GA4 ID
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/your-repo
+    - icon: fontawesome/brands/linkedin
+      link: https://linkedin.com/company/your-company
+  version:
+    provider: mike
+    default: stable
+
+# Navigation
+nav:
+  - Home: index.md
+  
+  - Getting Started:
+    - Introduction: getting-started/introduction.md
+    - Quick Start: getting-started/quick-start.md
+    - Installation: getting-started/installation.md
+    - Configuration: getting-started/configuration.md
+  
+  - Architecture:
+    - System Overview: architecture/overview.md
+    - Core Components: architecture/components.md
+    - Data Flow: architecture/data-flow.md
+    - Technology Stack: architecture/tech-stack.md
+  
+  - Features:
+    - SOP Search Engine: features/sop-search.md
+    - HR Data System: features/hr-system.md
+    - Voice Interface: features/voice-interface.md
+    - Session Management: features/session-management.md
+    - Multi-Modal Support: features/multi-modal.md
+  
+  - API Reference:
+    - Overview: api/overview.md
+    - Chat Endpoints: api/chat-endpoints.md
+    - Voice Endpoints: api/voice-endpoints.md
+    - Session Endpoints: api/session-endpoints.md
+    - Status Endpoints: api/status-endpoints.md
+  
+  - Developer Guide:
+    - Database Setup: developer/database-setup.md
+    - CSV Ingestion: developer/csv-ingestion.md
+    - RAG Engine: developer/rag-engine.md
+    - Tool Integration: developer/tool-integration.md
+    - Authentication: developer/authentication.md

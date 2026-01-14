@@ -1,0 +1,305 @@
+/* DENAI Documentation Custom Styles */
+
+:root {
+  --denai-primary: #3f51b5;
+  --denai-accent: #2196f3;
+  --denai-success: #4caf50;
+  --denai-warning: #ff9800;
+  --denai-error: #f44336;
+  --denai-info: #00bcd4;
+}
+
+/* Grid cards enhancement */
+.md-typeset .grid.cards {
+  margin-top: 2rem;
+}
+
+.md-typeset .grid.cards > * {
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.md-typeset .grid.cards > *:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+}
+
+/* Mermaid diagram enhancements */
+.mermaid {
+  text-align: center;
+  margin: 2rem 0;
+  background: transparent !important;
+}
+
+.mermaid svg {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Code block enhancements */
+.md-typeset pre {
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.md-typeset code {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 0.9em;
+}
+
+/* Table enhancements */
+.md-typeset table:not([class]) {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  font-size: 0.9em;
+}
+
+.md-typeset table:not([class]) thead {
+  background: var(--denai-primary);
+  color: white;
+}
+
+.md-typeset table:not([class]) tbody tr:hover {
+  background: rgba(63, 81, 181, 0.05);
+}
+
+/* Admonition custom colors */
+.md-typeset .admonition.tip {
+  border-color: var(--denai-success);
+}
+
+.md-typeset .admonition.warning {
+  border-color: var(--denai-warning);
+}
+
+.md-typeset .admonition.danger {
+  border-color: var(--denai-error);
+}
+
+.md-typeset .admonition.info {
+  border-color: var(--denai-info);
+}
+
+/* Status badges */
+.status-badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 0.85em;
+  font-weight: 500;
+}
+
+.status-badge.success {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+.status-badge.warning {
+  background: #fff3e0;
+  color: #f57c00;
+}
+
+.status-badge.error {
+  background: #ffebee;
+  color: #c62828;
+}
+
+/* API endpoint styling */
+.api-method {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 0.85em;
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+.api-method.get {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+.api-method.post {
+  background: #e3f2fd;
+  color: #1565c0;
+}
+
+.api-method.put {
+  background: #fff3e0;
+  color: #f57c00;
+}
+
+.api-method.delete {
+  background: #ffebee;
+  color: #c62828;
+}
+
+/* Enhanced headers */
+.md-typeset h1 {
+  font-weight: 600;
+  color: var(--denai-primary);
+  border-bottom: 2px solid var(--denai-primary);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.md-typeset h2 {
+  font-weight: 600;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+/* Dark mode adjustments */
+[data-md-color-scheme="slate"] .md-typeset h1 {
+  color: var(--denai-accent);
+  border-bottom-color: var(--denai-accent);
+}
+
+[data-md-color-scheme="slate"] .md-typeset h2 {
+  border-top-color: rgba(255,255,255,0.1);
+}
+
+[data-md-color-scheme="slate"] .md-typeset table:not([class]) thead {
+  background: #424242;
+}
+
+/* Content tabs */
+.md-typeset .tabbed-set {
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+/* Footer enhancements */
+.md-footer {
+  background: linear-gradient(135deg, var(--denai-primary) 0%, #283593 100%);
+}
+
+/* Navigation enhancements */
+.md-nav__item--active > .md-nav__link {
+  color: var(--denai-primary);
+  font-weight: 600;
+}
+
+/* Search enhancements */
+.md-search__input {
+  border-radius: 24px;
+}
+
+/* Custom container for feature showcase */
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.feature-card {
+  padding: 1.5rem;
+  border-radius: 8px;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+}
+
+.feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+}
+
+[data-md-color-scheme="slate"] .feature-card {
+  background: #2d2d2d;
+}
+
+/* Code language badge */
+.md-typeset pre > code::before {
+  content: attr(data-lang);
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  padding: 2px 8px;
+  border-radius: 4px;
+  background: rgba(0,0,0,0.6);
+  color: white;
+  font-size: 0.75em;
+  text-transform: uppercase;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .md-typeset .grid.cards {
+    grid-template-columns: 1fr;
+  }
+  
+  .feature-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Print styles */
+@media print {
+  .md-header,
+  .md-footer,
+  .md-sidebar {
+    display: none;
+  }
+  
+  .md-content {
+    margin: 0;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.md-typeset .admonition {
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0,0,0,0.05);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--denai-primary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #283593;
+}
+
+/* Loading animation for diagrams */
+.mermaid[data-processed="false"] {
+  position: relative;
+  min-height: 200px;
+}
+
+.mermaid[data-processed="false"]::after {
+  content: "Loading diagram...";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #999;
+  font-style: italic;
+}
