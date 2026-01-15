@@ -9,7 +9,6 @@ DENAI adalah sistem chatbot berbasis AI yang mengintegrasikan:
 - **🔍 Mesin Pencari SOP** - Akses cepat ke dokumen Standard Operating Procedure perusahaan
 - **👥 Sistem Data HR** - Query data karyawan dengan natural language (khusus HR)
 - **🎙️ Interface Suara** - Interaksi hands-free dengan text-to-speech dan speech-to-text
-- **💬 Chat Multi-Modal** - Dukungan teks, suara, dan dokumen
 - **🧠 RAG Engine** - Retrieval-Augmented Generation untuk jawaban akurat
 - **📊 Database Universal** - Otomatis membaca struktur database apapun
 
