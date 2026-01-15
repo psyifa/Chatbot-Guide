@@ -4,7 +4,7 @@
   "buildCommand": "mkdocs build",
   "outputDirectory": "site",
 
-  "installCommand": "pip install mkdocs-material mkdocs-minify-plugin mkdocs-git-revision-date-localized-plugin",
+  "installCommand": "pip install mkdocs mkdocs-material mkdocs-minify-plugin mkdocs-git-revision-date-localized-plugin",
 
   "build": {
     "env": {
