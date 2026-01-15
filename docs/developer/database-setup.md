@@ -160,37 +160,31 @@ python ingest_docs.py
 
 ```mermaid
 sequenceDiagram
-    participant S as Script<br/>(ingest_docs.py)
-    participant P as PDF Parser<br/>(pdfplumber)
-    participant L as LLM<br/>(OpenAI)
-    participant E as Embedder<br/>(OpenAI)
-    participant V as Vector DB<br/>(Pinecone)
-    
+    participant S as Script (ingest_docs.py)
+    participant P as PDF Parser (pdfplumber)
+    participant L as LLM (OpenAI)
+    participant E as Embedder (OpenAI)
+    participant V as Vector DB (Pinecone)
+
     S->>P: Read PDF
     P-->>S: Extracted text
-    
+
     S->>S: Detect content type
     Note over S: Table, Flowchart, Text
-    
+
     S->>L: Process special content
     Note over S,L: Rule-based + LLM fallback
     L-->>S: Structured data
-    
+
     S->>E: Create embeddings
-    Note over S,E: Batch: 100 vectors
+    Note over S,E: Batch size = 100
     E-->>S: Vector arrays
-    
+
     S->>V: Upsert vectors
-    Note over S,V: With metadata
+    Note over S,V: Stored with metadata
     V-->>S: Confirmation
-    
-    S->>S: Next batch
-    
-    style S fill:#fff3e0,stroke:#f57c00,stroke-width:2px,color:#000
-    style P fill:#e3f2fd,stroke:#1976d2,stroke-width:2px,color:#000
-    style L fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px,color:#000
-    style E fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px,color:#000
-    style V fill:#fce4ec,stroke:#c2185b,stroke-width:2px,color:#000
+
+    S->>S: Process next batch
 ```
 
 ### Monitoring & Maintenance
